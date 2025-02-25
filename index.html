@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Prayer Tracker</title>
+    <link rel="stylesheet" href="style.css">        
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Daily Prayer Tracker</h1>
+        </header>
+
+        <div class="streak-display">
+            <p class="streak-count" id="streakCount">0</p>
+            <p class="streak-label">Day Streak</p>
+        </div>
+
+        <div class="prayer-card">
+            <div class="date-display" id="currentDate">Loading date...</div>
+            <ul class="prayer-list">
+                <li class="prayer-item">
+                    <input type="checkbox" class="prayer-checkbox" id="fajr" data-prayer="fajr">
+                    <label class="prayer-name" for="fajr">Fajr</label>
+                    <span class="prayer-time">Dawn Prayer</span>
+                </li>
+                <li class="prayer-item">
+                    <input type="checkbox" class="prayer-checkbox" id="zuhr" data-prayer="zuhr">
+                    <label class="prayer-name" for="zuhr">Zuhr</label>
+                    <span class="prayer-time">Noon Prayer</span>
+                </li>
+                <li class="prayer-item">
+                    <input type="checkbox" class="prayer-checkbox" id="asr" data-prayer="asr">
+                    <label class="prayer-name" for="asr">Asr</label>
+                    <span class="prayer-time">Afternoon Prayer</span>
+                </li>
+                <li class="prayer-item">
+                    <input type="checkbox" class="prayer-checkbox" id="maghrib" data-prayer="maghrib">
+                    <label class="prayer-name" for="maghrib">Maghrib</label>
+                    <span class="prayer-time">Sunset Prayer</span>
+                </li>
+                <li class="prayer-item">
+                    <input type="checkbox" class="prayer-checkbox" id="isha" data-prayer="isha">
+                    <label class="prayer-name" for="isha">Isha</label>
+                    <span class="prayer-time">Night Prayer</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <p class="stat-value" id="todayCount">0/5</p>
+                <p class="stat-label">Today</p>
+            </div>
+            <div class="stat-box">
+                <p class="stat-value" id="weeklyAverage">0%</p>
+                <p class="stat-label">Weekly</p>
+            </div>
+            <div class="stat-box">
+                <p class="stat-value" id="monthlyAverage">0%</p>
+                <p class="stat-label">Monthly</p>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button id="resetButton">Reset Day</button>
+            <button id="clearDataButton">Clear All Data</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

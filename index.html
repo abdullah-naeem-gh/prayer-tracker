@@ -17,8 +17,44 @@
             <p class="streak-label">Day Streak</p>
         </div>
 
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <h2 class="calendar-title">Prayer Contribution Graph</h2>
+            </div>
+            <div class="calendar-month-labels" id="calendarMonthLabels">
+                <!-- Month labels will be inserted here -->
+            </div>
+            <div class="calendar-day-labels">
+                <div class="calendar-day-label">Mon</div>
+                <div class="calendar-day-label">Tue</div>
+                <div class="calendar-day-label">Wed</div>
+                <div class="calendar-day-label">Thu</div>
+                <div class="calendar-day-label">Fri</div>
+                <div class="calendar-day-label">Sat</div>
+                <div class="calendar-day-label">Sun</div>
+            </div>
+            <div class="calendar-grid" id="calendarGrid">
+                <!-- Calendar cells will be inserted here -->
+            </div>
+            <div class="calendar-legend">
+                <span class="legend-label">Less</span>
+                <div class="legend-cells">
+                    <div class="legend-cell level-0"></div>
+                    <div class="legend-cell level-1"></div>
+                    <div class="legend-cell level-2"></div>
+                    <div class="legend-cell level-3"></div>
+                    <div class="legend-cell level-4"></div>
+                </div>
+                <span class="legend-label">More</span>
+            </div>
+        </div>
+
         <div class="prayer-card">
-            <div class="date-display" id="currentDate">Loading date...</div>
+            <div class="date-navigation">
+                <button class="nav-button" id="prevDayBtn">← Previous Day</button>
+                <div class="date-display" id="currentDate">Loading date...</div>
+                <button class="nav-button" id="nextDayBtn">Next Day →</button>
+            </div>
             <ul class="prayer-list">
                 <li class="prayer-item">
                     <input type="checkbox" class="prayer-checkbox" id="fajr" data-prayer="fajr">
@@ -51,7 +87,7 @@
         <div class="stats-container">
             <div class="stat-box">
                 <p class="stat-value" id="todayCount">0/5</p>
-                <p class="stat-label">Today</p>
+                <p class="stat-label">Current Day</p>
             </div>
             <div class="stat-box">
                 <p class="stat-value" id="weeklyAverage">0%</p>
@@ -61,13 +97,20 @@
                 <p class="stat-value" id="monthlyAverage">0%</p>
                 <p class="stat-label">Monthly</p>
             </div>
+            <div class="stat-box">
+                <p class="stat-value" id="totalPrayersCount">0</p>
+                <p class="stat-label">Total Prayers</p>
+            </div>
         </div>
 
         <div class="button-container">
-            <button id="resetButton">Reset Day</button>
+            <button id="resetButton">Reset Current Day</button>
+            <button id="todayButton">Go to Today</button>
             <button id="clearDataButton">Clear All Data</button>
         </div>
     </div>
+
+    <div class="tooltip" id="tooltip"></div>
 <script src="script.js"></script>
 </body>
 </html>
